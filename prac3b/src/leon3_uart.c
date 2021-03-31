@@ -28,6 +28,7 @@ struct UART_regs
 struct UART_regs * pLEON3_UART_REGS= 0x80000100;
 
 
+//Es una macro, no una función.
 uint8_t leon3_UART_TF_IS_FULL()
 {
 	uint8_t uart_tf_is_full;
@@ -53,6 +54,7 @@ int8_t leon3_putchar(char c)
 	return (write_timeout == 0xAAAAA);
 }
 
+//OK
 char leon3_getchar()
 {
 	uint8_t getchar;
@@ -60,6 +62,7 @@ char leon3_getchar()
 	return getchar;
 }
 
+//OK
 uint8_t leon3_UART_TF_IS_EMPTY()
 {
 	uint8_t uart_tf_is_empty;
@@ -69,16 +72,19 @@ uint8_t leon3_UART_TF_IS_EMPTY()
 	return uart_tf_is_empty;
 }
 
+//OK
 void leon3_UART_RX_ENABLE()
 {
 	pLEON3_UART_REGS->Ctrl |= LEON3_UART_RX;
 }
 
+//OK
 void leon3_UART_RX_IRQ_ENABLE()
 {
 	pLEON3_UART_REGS->Ctrl |= LEON3_UART_TFE;
 }
 
+//OK
 void leon3_UART_ConfigRXTXLoop(uint8_t set_rxtxloop)
 {
 	if (set_rxtxloop ==1){

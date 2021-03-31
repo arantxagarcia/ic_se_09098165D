@@ -39,6 +39,7 @@ leon3_trap_handler_disable_irqs);
  leon3_sys_call_disable_irqs(); //Deshabilito interrupciones
 //COMPLETAR instalando como manejador de la interrupción de
  //nivel 2 la rutina uart_rx_irq_handler
+ //OK
  leon3_install_handler(0x12, uart_rx_irq_handler);
 
 //Habilito loop-back

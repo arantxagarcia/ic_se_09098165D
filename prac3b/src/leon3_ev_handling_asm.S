@@ -4,7 +4,7 @@
  *  Created on: Feb 28, 2013
  *      Author: user
  */
-
+//no hace falta si incluyes el directorio include en el path del proyecto
 #include "../include/leon3_asm.h"
 
 .section ".text"

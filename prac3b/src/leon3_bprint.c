@@ -12,6 +12,7 @@
 int8_t leon3_print_string(char* str)
 {
 
+	//Los comentarios de la práctica 2 no están incorporados
 	char *tmp;
 	for(tmp  = str; *tmp !='\0'; tmp++){
 		leon3_putchar(*tmp);
@@ -22,6 +23,7 @@ int8_t leon3_print_string(char* str)
 
 int8_t leon3_print_uint8(uint8_t i)
 {
+	//Igual, los comentarios de la práctica 2 no están incorporados.
 	int8_t cent, dec, uni;
 	cent = i/100;
 	dec = (i - cent*100)/10;
@@ -49,6 +51,18 @@ int8_t leon3_print_uint8(uint8_t i)
 }
 	int8_t leon3_print_uint32(uint32_t i)
 	{
+	
+	//El código es farragoso. 
+	//sería mejor hacerlo de forma iterativa con un while 
+	//en vez de usar if else if... 
+	//Sería algo así
+	//int8_t error=0;
+	//int8_t first_digit=0;
+	
+	//if(i==0)
+	//	leon3_putchar('0');
+	//else{
+		//while(i&&(!error)){
 
 		int8_t a,b,c,d;
 		a = i/1000000000;
