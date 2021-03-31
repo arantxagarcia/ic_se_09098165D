@@ -34,12 +34,15 @@ int main(){
 	// manejador de la interrupción de nivel 1
 
 	//COMPLETAR
+	//OK
 	leon3_install_handler(0x11,hw_irq_vector_0x11_handler);
 
 	//Desenmascara la interrupcion de nivel 1( correspondiente
 	// al vector 17, es decir el vector 0x11)
+	//OK
 	leon3_unmask_irq(1);
 
+	//OK
 	//Habilitar las interrupciones
 	leon3_sys_call_enable_irqs();
 

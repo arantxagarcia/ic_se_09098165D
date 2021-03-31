@@ -1,3 +1,4 @@
+//no hace falta si incluyes el directorio include en el path del proyecto
 #include "../include/leon3_ev_handling.h"
 #include "../include/leon3_hw_irqs.h"
 #include "../include/leon3_bprint.h"
